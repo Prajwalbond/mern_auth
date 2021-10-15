@@ -1,6 +1,7 @@
 const express =  require("express");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
+const cookieParser = require("cookie-parser");
 
 dotenv.config();
 
@@ -10,6 +11,7 @@ const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server started on port: ${PORT}`));
 
 app.use(express.json()); //makes any request into json object
+app.use(cookieParser()); 
 
 //connect to MongoDB
 mongoose.connect(
