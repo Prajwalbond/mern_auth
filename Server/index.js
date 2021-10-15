@@ -27,3 +27,4 @@ mongoose.connect(
 // set up router
 
 app.use("/auth",require("./routers/userRouter"));
+app.use("/customer",require("./routers/customerRouter"));
